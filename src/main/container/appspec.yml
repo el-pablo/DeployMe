@@ -22,4 +22,7 @@ hooks:
     - location: scripts/stop-server
       timeout: 300
       runas: ec2-user
-
+  ValidateService:
+    - location: scripts/verify
+      timeout: 300
+      runas: ec2-user
