@@ -1,5 +1,10 @@
 version: 0.0
 os: linux
+files:
+  - source: ./test-deploy-1.0-SNAPSHOT.jar
+    destination: /home/ec2-user/deploy-me-app
+  - source: ./deploy-me.yml
+    destination: /home/ec2-user/deploy-me-app
 permissions:
   - object: scripts
     pattern: "*.*"

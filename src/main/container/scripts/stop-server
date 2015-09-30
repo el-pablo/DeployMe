@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [ -f ~/deploy-me-app.pid ]; then
-	kill -TERM $(cat ~/deploy-me-app.pid) || echo "Already Dead"
+if [ -f ~/deploy-me-app/deploy-me.pid ]; then
+	kill -TERM $(cat ~/deploy-me-app/deploy-me.pid) || echo "Already Dead"
 fi
 
 exit 0
