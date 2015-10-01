@@ -1,4 +1,4 @@
-template: Hello, %s!
+template: Oh hi there, %s!
 
 defaultName: ${DW_DEFAULT_NAME:-Stranger}
 
