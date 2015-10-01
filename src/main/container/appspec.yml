@@ -5,26 +5,16 @@ files:
     destination: /home/ec2-user/deploy-me-app
   - source: ./deploy-me.yml
     destination: /home/ec2-user/deploy-me-app
-  - source: ./scripts
-    destination: /home/ec2-user/deploy-me-app/scripts
-permissions:
-  - object: /home/ec2-user/deploy-me-app/scripts
-    pattern: "**"
-    owner: ec2-user
-    group: ec2-user
-    mode: 700
-    type:
-      - file
 hooks:
   ApplicationStart:
-    - location: /home/ec2-user/deploy-me-app/scripts/start-server
+    - location: scripts/start-server
       timeout: 300
       runas: ec2-user
   ApplicationStop:
-    - location: /home/ec2-user/deploy-me-app/scripts/stop-server
+    - location: scripts/stop-server
       timeout: 300
       runas: ec2-user
   ValidateService:
-    - location: /home/ec2-user/deploy-me-app/scripts/verify
+    - location: scripts/verify
       timeout: 300
       runas: ec2-user
