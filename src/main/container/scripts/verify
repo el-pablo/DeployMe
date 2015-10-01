@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+sleep 5
 response=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:8081/healthcheck)
 if [ $response -eq 200 ]; then
 	echo "Health check passed"
