@@ -32,7 +32,6 @@ permissions:
     mode: 700
     type:
       - file
-
 hooks:
   ApplicationStart:
     - location: /home/ec2-user/deploy-me-app/scripts/start-server
